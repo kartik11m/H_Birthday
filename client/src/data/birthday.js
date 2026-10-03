@@ -30,7 +30,7 @@ export const messages = [
 
 { id:2, category:"Tumhare sapno ke naam", emoji:"✨", message:"Tum jo bhi dream karo, jis bhi cheez ko paana chaho — bas uske peeche dil se lagi rehna. Mujhe pata hai tum bohot kuch kar sakte ho, bas khud par believe karna baaki tum karlogey mujhe pura vishavas hai tum par. ✨" },
 
-{ id:3, category:"Mushkil dinon ke liye", emoji:"🌧️", message:"Kabhi din thoda zyada heavy ho jaaye toh khud par pressure mat daalna. Thoda rest kar lena, thoda ro lena, thoda has lena — aur phir apni speed se wapas aa jaana. Tum handle kar loge, madammm. baaki toh tumhara host aur dost hai na kabhi bhi call kar liya karo🫂 tension nahi lene ka bhidu sab thik hojayega aur kehte haina agar aant mein sab acha na ho toh picture abhi baaki hai mere dost" },
+{ id:3, category:"Mushkil dinon ke liye", emoji:"🌧️", message:"Kabhi din thoda zyada heavy ho jaaye toh khud par pressure mat daalna. Thoda rest kar lena, thoda ro lena, thoda has lena — aur phir apni speed se wapas aa jaana. Tum handle kar loge, madammm. baaki toh tumhara host aur dost hai na kabhi bhi call kar liya karo🫂 tension nahi lene ka sab thik hojayega aur kehte haina agar aant mein sab acha na ho toh picture abhi baaki hai mere dost" },
 
 { id:4, category:"Aane wale kal ke liye", emoji:"🌙", message:"Tumhare aane wala saal bohot saari khushiyan, sukoon bhare moments, random hasi, beautiful memories aur unexpected surprises lekar aaye. Aur haan, thoda kam tension aur thoda zyada enjoy bhi. 😭🫶🏻" },
 
