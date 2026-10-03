@@ -35,7 +35,7 @@ export default function StarryNight() {
           "Even on the days when everything feels a little heavy..."
         </p>
         <p style={{fontFamily:"Caveat,cursive",fontSize:"clamp(.92rem,3vw,1.1rem)",color:"rgba(220,180,240,.65)",lineHeight:1.7}}>
-          Remember — you are loved, you are enough, and beautiful things are always on their way. 🪷
+          Remember — you are loved, you are enough, and beautiful things are always on their way. 🪷 <br /> Jai Jagannath ❤️
         </p>
       </div>
     </section>
