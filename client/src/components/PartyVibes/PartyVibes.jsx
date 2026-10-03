@@ -147,7 +147,7 @@ export default function PartyVibes() {
   return (
     <section ref={secRef} style={{position:"relative",padding:"44px 18px 40px",background:"#FEF5F8",overflow:"hidden"}}>
       <h2 style={{fontFamily:"Playfair Display,serif",fontSize:"clamp(1.15rem,4vw,1.8rem)",fontWeight:700,color:"#3D1A30",textAlign:"center",marginBottom:20}}>
-        Party Time DJ Kartikkkkk cominggg! 🌷🎉😅
+        Party Time by DJ Kartikkkkk! 🌷🎉😅
       </h2>
 
       {/* Video card */}

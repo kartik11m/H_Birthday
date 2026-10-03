@@ -195,6 +195,16 @@ function ConstellationLines({ discovered, containerSize }) {
   );
 }
 
+/* ─── compute card alignment based on star's horizontal position ── */
+function getCardAlignment(xPercent) {
+  // Stars near the right edge: align card to the right so it doesn't overflow
+  if (xPercent > 65) return { left: "auto", right: 0, transform: "none", arrowLeft: "calc(100% - 24px)" };
+  // Stars near the left edge: align card to the left
+  if (xPercent < 35) return { left: 0, right: "auto", transform: "none", arrowLeft: "24px" };
+  // Center-ish stars: centered card
+  return { left: "50%", right: "auto", transform: "translateX(-50%)", arrowLeft: "50%" };
+}
+
 /* ─── individual wish star ────────────────────────────── */
 function WishStar({ wish, index, isOpen, isDiscovered, onTap }) {
   const pos = STAR_POSITIONS[index];
@@ -207,6 +217,8 @@ function WishStar({ wish, index, isOpen, isDiscovered, onTap }) {
     }
     onTap();
   }, [isDiscovered, onTap]);
+
+  const cardAlign = getCardAlignment(pos.x);
 
   return (
     <div
@@ -324,11 +336,13 @@ function WishStar({ wish, index, isOpen, isDiscovered, onTap }) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.7, y: 10 }}
             transition={{ type: "spring", stiffness: 300, damping: 24 }}
+            className="wish-card"
             style={{
               position: "absolute",
               top: "calc(100% + 14px)",
-              left: "50%",
-              transform: "translateX(-50%)",
+              left: cardAlign.left,
+              right: cardAlign.right,
+              transform: cardAlign.transform,
               background: "rgba(13,5,21,0.85)",
               backdropFilter: "blur(12px)",
               border: "1px solid rgba(255,215,0,0.2)",
@@ -340,11 +354,11 @@ function WishStar({ wish, index, isOpen, isDiscovered, onTap }) {
               zIndex: 20,
             }}
           >
-            {/* arrow pointing up */}
+            {/* arrow pointing up — follows card alignment */}
             <div style={{
               position: "absolute",
               top: -6,
-              left: "50%",
+              left: cardAlign.arrowLeft,
               transform: "translateX(-50%) rotate(45deg)",
               width: 12,
               height: 12,
