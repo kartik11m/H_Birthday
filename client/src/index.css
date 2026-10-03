@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{background-color:#FEF5F8;color:#3D1A30;font-family:"Poppins",system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+html.lenis{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto}
+.lenis.lenis-stopped{overflow:hidden}
+
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes twinkle{0%,100%{opacity:.15;transform:scale(.8)}50%{opacity:1;transform:scale(1.5)}}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+@keyframes rise{from{transform:translateY(110vh);opacity:0}10%{opacity:.7}90%{opacity:.3}to{transform:translateY(-10vh);opacity:0}}
+@keyframes glow-btn{0%,100%{box-shadow:0 8px 28px rgba(212,100,154,.45)}50%{box-shadow:0 8px 44px rgba(212,100,154,.8)}}
+@keyframes petal-open{0%{opacity:0;transform:scale(0) rotate(-30deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+
+::selection{background:rgba(212,100,154,.3);color:#3D1A30}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#FEF5F8}
+::-webkit-scrollbar-thumb{background:#D4649A;border-radius:3px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
